@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx
+  name: my-nginx1
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-nginx
-        image: joy132/assesment:v1
+        image: joy132/assesment:v2
         ports:
         - containerPort: 80
 
