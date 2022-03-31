@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Job
+kind: Deployment
 metadata:
   name: my-nginx1
 spec:
