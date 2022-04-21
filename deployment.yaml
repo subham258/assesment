@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx1
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      run: my-nginx
-  replicas: 7
+      app: nginx
   template:
     metadata:
       labels:
-        run: my-nginx
+        app: nginx
     spec:
       containers:
-      - name: my-nginx
-        image: joy132/assesment:v2
+      - name: nginx
+        image: core.harbor.domain/nginx/harbor-nginx:v2
         ports:
         - containerPort: 80
 
